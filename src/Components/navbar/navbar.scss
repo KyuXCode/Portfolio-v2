@@ -1,0 +1,166 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    &.active {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+    }
+}
+
+.nav-box {
+    position: relative;
+    max-width: 1224px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    margin: 0 auto;
+
+    .logo {
+        text-decoration: none;
+        color: #000;
+
+        background: #ffffff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .social-icons {
+        display: flex;
+
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
+
+        div {
+            margin-left: 1rem;
+
+            svg {
+                color: #ffffff;
+                opacity: 0.6;
+                cursor: pointer;
+                transition: 0.3;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+    // Hamburger Menu
+    .hamburger {
+        background: #ffffff;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        position: relative;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        svg {
+            width: 70%;
+            height: 70%;
+        }
+
+        @media screen and (max-width: 800px) {
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .closeHamburger {
+        background: #000;
+        width: 4rem;
+        height: 4rem;
+        position: fixed;
+        border-right: 50%;
+        right: 0;
+        top: 0;
+    }
+
+    .menuX {
+        color: #ffffff;
+        background: #000;
+        position: fixed;
+        top: 2rem;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+
+        svg {
+            cursor: pointer;
+            width: 1.5rem;
+            height: 1.5rem;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+        }
+
+        li {
+            list-style: none;
+            margin-top: 1rem;
+
+            a {
+                color: #ffffff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                opacity: 0.6;
+                transition: all 0.3s ease;
+
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.navlinks {
+    display: flex;
+    list-style: none;
+
+    li {
+        margin-left: 3rem;
+
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            opacity: 0.6;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
