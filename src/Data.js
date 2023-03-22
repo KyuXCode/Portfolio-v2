@@ -1,5 +1,6 @@
 import { FaHtml5, FaCss3, FaNodeJs, FaReact, FaSass, FaFigma, FaPhoneAlt, FaUser, FaMapMarkerAlt, FaPaperPlane, FaGithub, FaLinkedin } from "react-icons/fa";
 import { DiJavascript } from "react-icons/di";
+import {BsFileEarmarkPdfFill} from "react-icons/bs"
 import { SiTypescript, SiAdonisjs, SiKotlin, SiFlutter, SiDart, } from "react-icons/si";
 import portrait from "./Assests/portrait.jpg"
 // import work1 from "./assets/work1.png";
@@ -11,8 +12,14 @@ import portrait from "./Assests/portrait.jpg"
 export const navLinks = ["home", "about", "skills", "portfolio", "contact"]
 
 export const socialIcons = [
-  <FaLinkedin />,
-  <FaGithub />
+    {
+        icon: <FaLinkedin />,
+        link: "https://www.linkedin.com/in/kai38547"
+    },
+    {
+        icon: <FaGithub />,
+        link: "https://github.com/KyuXCode"
+    }
 ]
 
 export const bios = [
@@ -33,10 +40,16 @@ export const bios = [
         icon: <FaPaperPlane />,
         key: "Email",
         value: "kai38547@gmail.com"
+    },
+    {
+        id: 4,
+        icon: <BsFileEarmarkPdfFill />,
+        key: "Resume",
+        value: "https://kyresume.netlify.app"
     }
 ]
 
-export const icons = [<FaHtml5 />, <FaCss3 />, <FaSass />, <DiJavascript />, <SiTypescript />, <SiFlutter />, <SiDart />, <FaReact />, <SiAdonisjs/>, <SiKotlin />, <FaFigma />]
+export const icons = [<FaHtml5 />, <FaCss3 />, <FaSass />, <DiJavascript />, <SiTypescript />, <SiFlutter />, <SiDart />, <FaReact />, <SiAdonisjs />, <SiKotlin />, <FaFigma />]
 
 export const experiences = [
     {
@@ -103,7 +116,7 @@ export const workImages = [
 
 
 export const workNavs = [
-    "All", "React", "Dart", 
+    "All", "React", "Dart",
 ]
 
 export const contacts = [

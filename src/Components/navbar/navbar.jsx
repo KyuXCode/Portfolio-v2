@@ -53,7 +53,7 @@ function Navbar(props) {
                     {navLinks.map((navLink, index) => {
                         return (
                             <li key={index}>
-                                <a href={`${navLink}`}>{navLink}</a>
+                                <a href={`#${navLink}`}>{navLink}</a>
                             </li>)
                     })}
                 </ul>
@@ -62,7 +62,7 @@ function Navbar(props) {
                     {socialIcons.map((socialIcon, index) => {
                         return (
                             <div key={index}>
-                                {socialIcon}
+                                <a target='_blank' href={socialIcon.link}>{socialIcon.icon}</a>
                             </div>
                         )
                     })}
@@ -82,12 +82,12 @@ function Navbar(props) {
                     variants={navlinkVariants}
                     animate={toggle ? 'visible' : 'hidden'}
                 >
-                  <HiX onClick={() => setToggle(false)}/>
+                    <HiX onClick={() => setToggle(false)} />
 
                     {navLinks.map((navLink, index) => {
                         return (
                             <li key={index}>
-                                <a href={`${navLink}`}>{navLink}</a>
+                                <a href={`#${navLink}`}>{navLink}</a>
                             </li>
                         )
                     })}
