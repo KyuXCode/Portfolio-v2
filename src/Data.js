@@ -1,7 +1,7 @@
-import { FaHtml5, FaCss3, FaNodeJs, FaReact, FaSass, FaFigma, FaPhoneAlt, FaUser, FaMapMarkerAlt, FaPaperPlane, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaHtml5, FaCss3, FaNodeJs, FaReact, FaSass, FaFigma, FaPhoneAlt, FaUser, FaMapMarkerAlt, FaPaperPlane, FaGithub, FaLinkedin, FaJava, FaPython } from "react-icons/fa";
 import { DiJavascript } from "react-icons/di";
 import {BsFileEarmarkPdfFill} from "react-icons/bs"
-import { SiTypescript, SiAdonisjs, SiKotlin, SiFlutter, SiDart, } from "react-icons/si";
+import { SiTypescript, SiAdonisjs, SiKotlin, SiFlutter, SiDart, SiJavascript,SiCss3 } from "react-icons/si";
 import portrait from "./Assests/portrait.jpg"
 // import work1 from "./assets/work1.png";
 // import work2 from "./assets/work2.png";
@@ -41,15 +41,15 @@ export const bios = [
         key: "Email",
         value: "kai38547@gmail.com"
     },
-    {
-        id: 4,
-        icon: <BsFileEarmarkPdfFill />,
-        key: "Resume",
-        value: "https://kyresume.netlify.app"
-    }
+    // {
+    //     id: 4,
+    //     icon: <BsFileEarmarkPdfFill />,
+    //     key: "Resume",
+    //     value: "https://kyresume.netlify.app"
+    // }
 ]
 
-export const icons = [<FaHtml5 />, <FaCss3 />, <FaSass />, <DiJavascript />, <SiTypescript />, <SiFlutter />, <SiDart />, <FaReact />, <SiAdonisjs />, <SiKotlin />, <FaFigma />]
+export const icons = [<FaHtml5 />, <SiCss3 />, <FaSass />, <SiJavascript />, <SiTypescript />, <SiFlutter />, <SiDart />, <FaReact />, <SiAdonisjs />, <SiKotlin />, <FaJava />, <FaPython />, <FaFigma />]
 
 export const experiences = [
     {
@@ -63,28 +63,6 @@ export const experiences = [
         year: "2021",
         position: "Sales Adviser",
         company: "BestBuy"
-    }
-]
-export const finishes = [
-    {
-        id: 1,
-        number: '6+',
-        itemName: "Years Of Experience"
-    },
-    {
-        id: 2,
-        number: "150+",
-        itemName: "Satisfied Customers"
-    },
-    {
-        id: 3,
-        number: "669+",
-        itemName: "Designed Items"
-    },
-    {
-        id: 4,
-        number: "117+",
-        itemName: "Clients Served"
     }
 ]
 export const workImages = [
@@ -116,7 +94,9 @@ export const workImages = [
 
 
 export const workNavs = [
-    "All", "React", "Dart",
+    { id: 1, name: "All", value: "all"},
+    { id: 1, name: "Digital Corps", value: "dc"},
+    { id: 1, name: "Personal", value: "personal"},
 ]
 
 export const contacts = [
