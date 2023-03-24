@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import portrait from "../../../Assests/portrait.jpg"
+import portrait2 from "../../../Assests/portrait2.jpg"
 import './Home.scss'
 
 
-function Home(props) {
-
+function Home() {
     return (
         <div className="container" id="home">
             <div className="profile">
@@ -17,8 +17,8 @@ function Home(props) {
                 </h3>
                 <span className="job">Software Developer</span>
                 <span className="text">Passionate <br />
-                    to craft innonvated <br />
-                    software
+                    about crafting <br />
+                    advanced software
                 </span>
 
                 <a href="contact">connect with me</a>

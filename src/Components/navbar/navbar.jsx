@@ -9,6 +9,12 @@ function Navbar(props) {
     const [scroll, setScroll] = useState(false);
     const [toggle, setToggle] = useState(false);
 
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 20)
+        })
+    }, [])
+
     const hamburgerMenu = {
         hidden: {
             scale: 0
@@ -38,11 +44,11 @@ function Navbar(props) {
 
 
     return (
-        <motion.div
+        <motion.div className={scroll ? "header active" : "header"}
             initial={{ y: -25 }}
             animate={{ y: -5 }}
             transition={{ duration: 0.5 }}
-            className={scroll ? "header active" : "header"}>
+            >
 
             <div className="nav-box">
                 <a href='home' className="logo">
@@ -86,8 +92,8 @@ function Navbar(props) {
 
                     {navLinks.map((navLink, index) => {
                         return (
-                            <li key={index}>
-                                <a href={`#${navLink}`}>{navLink}</a>
+                            <li key={index} >
+                                <a href={`#${navLink}`} onClick={() => setToggle(false)}>{navLink}</a>
                             </li>
                         )
                     })}
