@@ -13,6 +13,11 @@ function Contact() {
 
     }, [])
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+    }
+
     return (
         <div className="container" id="contact">
             <motion.div className="title"
@@ -23,7 +28,7 @@ function Contact() {
                 <h1>Contact Me</h1>
             </motion.div>
 
-            <form className="contact-form"
+            <form className="contact-form" onSubmit={handleSubmit}
                 action="https://formsubmit.co/kai38547@email.com" 
                 method="POST">
 
@@ -83,7 +88,7 @@ function Contact() {
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <a href="#">Send</a>
+                        <button type='submit'>Send</button>
                     </motion.div>
 
                 </motion.div>
