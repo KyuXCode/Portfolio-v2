@@ -4,11 +4,12 @@ import {BsFileEarmarkPdfFill} from "react-icons/bs"
 import { SiTypescript, SiAdonisjs, SiKotlin, SiFlutter, SiDart, SiJavascript,SiCss3 } from "react-icons/si";
 import portrait from "./Assests/portrait.jpg"
 import portrait2 from "./Assests/portrait2.jpg"
-// import work1 from "./assets/work1.png";
-// import work2 from "./assets/work2.png";
-// import work3 from "./assets/work3.png";
-// import work4 from "./assets/work4.png";
-
+import commingSoon from "./Assests/comming.jpg"
+import work from "./Assests/work.png"
+import demo from "./Assests/work1.gif"
+import work2 from "./Assests/work2.jpg"
+import work3 from "./Assests/work3.jpg"
+import work6 from "./Assests/work6.jpg"
 
 export const navLinks = ["home", "about", "skills", "portfolio", "contact"]
 
@@ -69,21 +70,21 @@ export const experiences = [
 export const projects = [
     {
         id: 1,
-        img: portrait,
-        link: "",
+        img: work,
+        link: demo,
         name: "SilverScreen",
         category: "School"
     },
     {
         id: 2,
-        img: portrait,
-        link: "",
+        img: work2,
+        link: "https://sound-search-engine.netlify.app/",
         name: "Sound Search Engine",
         category: "Digital Corps"
     },
     {
         id: 3,
-        img: portrait,
+        img: work3,
         link: "https://corptube.netlify.app/",
         name: "CorpTube",
         category: "Digital Corps"
@@ -91,17 +92,24 @@ export const projects = [
    
     {
         id: 4,
-        img: portrait,
-        link: "",
+        img: commingSoon,
+        link: null,
         name: "Corstagram",
         category: "Digital Corps"
     },
     {
         id: 5,
-        img: portrait,
-        link: "",
+        img: commingSoon,
+        link: null,
         name: "ReelZen",
         category: "Personal"
+    },
+    {
+        id: 6,
+        img: work6,
+        link: "https://typing-game-practice.netlify.app/",
+        name: "Typing Game",
+        category: "Digital Corps"
     }
 ]
 
