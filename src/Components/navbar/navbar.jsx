@@ -5,7 +5,7 @@ import "./Navbar.scss"
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
-function Navbar(props) {
+function Navbar() {
     const [scroll, setScroll] = useState(false);
     const [toggle, setToggle] = useState(false);
 
