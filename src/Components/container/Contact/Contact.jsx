@@ -79,10 +79,10 @@ function Contact() {
                     <h3>Get In Touch</h3>
 
                     <div className="row">
-                        <input type="text" placeholder='firstName'
-                            name='First Name' />
-                        <input type="text" placeholder='lastName'
-                            name='Last name' />
+                        <input type="text" name='firstName'
+                            placeholder='First Name' />
+                        <input type="text" name='lastName'
+                            placeholder='Last name' />
                     </div>
 
                     <div className="row">
