@@ -84,14 +84,13 @@ function Contact() {
                         <textarea placeholder='Message'></textarea>
                     </div>
 
-                    <motion.div className="btn"
+                    <motion.button className="btn" type='submit'
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <button type='submit'>Send</button>
-                    </motion.div>
+                       <Send></Send>
 
-                </motion.div>
+                </motion.button>
             </form>
         </div >
     )
