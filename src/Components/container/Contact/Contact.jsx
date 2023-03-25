@@ -21,7 +21,7 @@ function Contact() {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(Object.fromEntries(new FormData(event.target))),
+            body: JSON.stringify(Object.fromEntries(new FormData(e.target))),
         })
             .then(response => response.json())
             .then(data => console.log(data))
