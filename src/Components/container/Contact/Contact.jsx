@@ -15,7 +15,7 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch('https://formsubmit.co/ajax/kai38547@email.com', {
+        fetch('https://formsubmit.co/ajax/kai38547@gmail.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
