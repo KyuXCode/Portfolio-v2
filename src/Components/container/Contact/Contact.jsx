@@ -15,16 +15,13 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch("https://formsubmit.co/ajax/kai38547@email.com", {
-            method: "POST",
+        fetch('https://formsubmit.co/ajax/kai38547@email.com', {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify({
-                name: "FormSubmit",
-                message: "I'm from Devro LABS"
-            })
+            body: JSON.stringify(Object.fromEntries(new FormData(event.target))),
         })
             .then(response => response.json())
             .then(data => console.log(data))
@@ -82,17 +79,19 @@ function Contact() {
                     <h3>Get In Touch</h3>
 
                     <div className="row">
-                        <input type="text" placeholder='First Name' />
-                        <input type="text" placeholder='Last name' />
+                        <input type="text" placeholder='firstName'
+                            name='First Name' />
+                        <input type="text" placeholder='lastName'
+                            name='Last name' />
                     </div>
 
                     <div className="row">
-                        <input type="text" placeholder='Phone' />
-                        <input type="email" placeholder='Email' />
+                        <input type="phone" placeholder='Phone' name='phone' />
+                        <input type="email" placeholder='Email' name='email' />
                     </div>
 
                     <div className="row">
-                        <textarea placeholder='Message'></textarea>
+                        <textarea placeholder='Message' name='message'></textarea>
                     </div>
 
                     <motion.button className="btn" type='submit'
