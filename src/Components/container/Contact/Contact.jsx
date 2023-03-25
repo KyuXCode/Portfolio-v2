@@ -15,7 +15,20 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
+        fetch("https://formsubmit.co/ajax/kai38547@email.com", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: "FormSubmit",
+                message: "I'm from Devro LABS"
+            })
+        })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.log(error))
     }
 
     return (
@@ -28,9 +41,7 @@ function Contact() {
                 <h1>Contact Me</h1>
             </motion.div>
 
-            <form className="contact-form" onSubmit={handleSubmit}
-                action="https://formsubmit.co/kai38547@email.com" 
-                method="POST">
+            <form className="contact-form" onSubmit={handleSubmit}>
 
                 <motion.div className='contact-left-box'
                     initial={{ x: 0, opacity: 0 }}
@@ -88,9 +99,9 @@ function Contact() {
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.3 }}
                     >
-                       <Send></Send>
-
-                </motion.button>
+                        Send
+                    </motion.button>
+                </motion.div>
             </form>
         </div >
     )
