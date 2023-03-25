@@ -3,6 +3,7 @@ import { DiJavascript } from "react-icons/di";
 import {BsFileEarmarkPdfFill} from "react-icons/bs"
 import { SiTypescript, SiAdonisjs, SiKotlin, SiFlutter, SiDart, SiJavascript,SiCss3 } from "react-icons/si";
 import portrait from "./Assests/portrait.jpg"
+import portrait2 from "./Assests/portrait2.jpg"
 // import work1 from "./assets/work1.png";
 // import work2 from "./assets/work2.png";
 // import work3 from "./assets/work3.png";
@@ -65,38 +66,51 @@ export const experiences = [
         company: "BestBuy"
     }
 ]
-export const workImages = [
+export const projects = [
     {
         id: 1,
-        // img: work1,
-        name: "project 1",
-        category: "web"
+        img: portrait,
+        link: "",
+        name: "SilverScreen",
+        category: "School"
     },
     {
         id: 2,
-        // img: work2,
-        name: "project 2",
-        category: "web"
+        img: portrait,
+        link: "",
+        name: "Sound Search Engine",
+        category: "Digital Corps"
     },
     {
         id: 3,
-        // img: work3,
-        name: "project 3",
-        category: "web"
+        img: portrait,
+        link: "https://corptube.netlify.app/",
+        name: "CorpTube",
+        category: "Digital Corps"
     },
+   
     {
         id: 4,
-        // img: work4,
-        name: "project 4",
-        category: "app"
+        img: portrait,
+        link: "",
+        name: "Corstagram",
+        category: "Digital Corps"
+    },
+    {
+        id: 5,
+        img: portrait,
+        link: "",
+        name: "ReelZen",
+        category: "Personal"
     }
 ]
 
 
 export const workNavs = [
-    { id: 1, name: "All", value: "all"},
-    { id: 1, name: "Digital Corps", value: "dc"},
-    { id: 1, name: "Personal", value: "personal"},
+    'All',
+    'Digital Corps',
+    'School',
+    'Personal'
 ]
 
 export const contacts = [
