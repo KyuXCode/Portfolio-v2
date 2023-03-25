@@ -7,11 +7,7 @@ import { motion } from 'framer-motion';
 
 function Contact() {
 
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-
-    }, [])
+    const [isSuccess, setIsSuccess] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -24,8 +20,8 @@ function Contact() {
             body: JSON.stringify(Object.fromEntries(new FormData(e.target))),
         })
             .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.log(error))
+            .then(setIsSuccess(true))
+            .catch(error => setIsSuccess(false))
     }
 
     return (
@@ -38,9 +34,16 @@ function Contact() {
                 <h1>Contact Me</h1>
             </motion.div>
 
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form className={`contact-form ${isSuccess ? 'inactive' : 'active'}`} onSubmit={handleSubmit}>
 
-                <motion.div className='contact-left-box'
+                <motion.h1 className={`title ${isSuccess ? 'active' : 'inactive'}`}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ y: [-50, 0], opacity: 1 }}
+                >
+                    Thank you!
+                </motion.h1>
+
+                <motion.div className={`contact-left-box ${isSuccess ? 'inactive' : 'active'}`}
                     initial={{ x: 0, opacity: 0 }}
                     whileInView={{ x: [-150, 0], opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -71,7 +74,7 @@ function Contact() {
                     </div>
                 </motion.div>
 
-                <motion.div className="contact-right"
+                <motion.div className={`contact-right ${isSuccess ? 'inactive' : 'active'}`}
                     initial={{ x: 0, opacity: 0 }}
                     whileInView={{ x: [150, 0], opacity: 1 }}
                     transition={{ duration: 1 }}
